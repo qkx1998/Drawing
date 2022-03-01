@@ -20,6 +20,7 @@ fig, ax = plt.subplots(figsize=(6, 4))
 
 # 在axes上作图
 ax.bar(a, b, label='bar')
+ax.bar(b, a, label='bar')
 
 # 在ax基础上调整各种细节
 ax.set_title('Title', fontsize=15)
@@ -29,10 +30,21 @@ ax.legend()
 
 '''
 多图绘制规范
-
 '''
+# fig为包含四张子图的画布。我们用axes[0][0]取到第一张,以此类推
+# 当我们有很多张子图时。可以先建好坐标轴 例如：loc = [(x, y) for x in range(2) for y in range(2)]
+# 之后用for循环 axes[loc[i]].plot(...)
+fig, axes = plt.subplots(2, 2, figsize=(8, 6))
 
+axes[0][0].bar(a, b, label='bar1')
+axes[0][1].bar(b, a, label='bar2')
+axes[1][0].bar(a, c, label='bar3')
+axes[1][1].bar(b, c, label='bar4')
 
+# 在axes基础上调整每个子图的细节
+axes[0][0].set_title('Title1', fontsize=15)
+axes[0][1].set_title('Title2', fontsize=15)
+...
 
 
 '''
