@@ -11,6 +11,7 @@ a = np.arange(1, 8)
 b = a ** 2
 c = a ** 3
 
+
 '''
 单图绘制规范
 '''
@@ -27,6 +28,7 @@ ax.set_title('Title', fontsize=15)
 ax.set_xlabel('xlabel', fontsize=15)
 ax.set_ylabel('ylabel', fontsize=15)
 ax.legend()
+
 
 '''
 多图绘制规范
