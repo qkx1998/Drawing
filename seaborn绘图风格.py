@@ -10,7 +10,7 @@ b = a ** 2
 # 设置风格的语句：
 sns.set_style('darkgrid')
 
-# 绘制出所有的风格
+#---------------绘制出所有的风格-------------------
 styles = ['darkgrid', 'whitegrid', 'dark', 'white', 'ticks']
 for idx, style in enumerate(styles):
     sns.set_style(style)
@@ -34,7 +34,7 @@ all_palettes = ['Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'BuG
 
 len(all_palettes) # 一共有172个
 
-# 绘制出所有的调色图样例图
+#------------------绘制出所有的调色图样例图---------------------
 fig, axes = plt.subplots(29, 6, figsize=(20, 100))
 locs = [(x, y) for x in range(29) for y in range(6)]
 for i, p in enumerate(all_palettes):
@@ -46,3 +46,6 @@ for i, p in enumerate(all_palettes):
         sns.barplot(a, b, palette=p, ax=axes[locs[i]])
     except:
         pass
+
+    
+    
